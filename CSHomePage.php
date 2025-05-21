@@ -91,34 +91,34 @@ $userEmail = $_SESSION['user_email'] ?? 'User';
       </div>
     </section>
   </main>
-  <!-- Support Modal -->
   <div id="supportModal" class="modal-overlay-support">
-    <div class="modal-box-support">
-      <span class="close-btn-support" id="closeSupportModal">&times;</span>
-      <h2>Need Help?</h2>
-      <p>If you have any questions or issues, feel free to reach out to our support team!</p>
-      <form id="supportForm">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="How can we help you?" required></textarea>
-        <button type="submit" class="modal-btn-support confirm">Send</button>
-      </form>
+        <div class="modal-box-support">
+            <span class="close-btn-support" id="closeSupportModal">&times;</span>
+            <h2>Need Help?</h2>
+            <p>If you have any questions or issues, feel free to reach out to our support team!</p>
+            <form id="supportForm">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <textarea placeholder="How can we help you?" required></textarea>
+                <button type="submit" class="modal-btn-support confirm">Send</button>
+            </form>
+        </div>
     </div>
-  </div>
-  <!-- Contact Modal -->
-  <div class="modal-overlay-contact" id="contactModal">
-    <div class="modal-box-contact">
-      <button id="closeContactModal">&times;</button>
-      <h2>Contact Us</h2>
-      <p>Have questions or feedback? We'd love to hear from you.</p>
-      <form id="contactForm">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit" class="modal-btn-contact">Send Message</button>
-      </form>
+
+    <!-- Contact Modal -->
+    <div class="modal-overlay-contact" id="contactModal">
+        <div class="modal-box-contact">
+            <button id="closeContactModal">&times;</button>
+            <h2>Contact Us</h2>
+            <p>Have questions or feedback? We'd love to hear from you.</p>
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="modal-btn-contact">Send Message</button>
+            </form>
+        </div>
     </div>
-  </div>
 
 </body>
 
