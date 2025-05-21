@@ -15,7 +15,6 @@ $register_message = '';
 $login_message = '';
 
 if (isset($_POST['registerSubmit'])) {
-    // Sanitize inputs
     $username = trim($_POST['signup_username']);
     $email = trim($_POST['signup_email']);
     $password = $_POST['signup_password'];
@@ -28,7 +27,6 @@ if (isset($_POST['registerSubmit'])) {
     } else {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        // Check if email exists using prepared stmt
         $stmt = $conn->prepare("SELECT id FROM users WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
@@ -38,7 +36,6 @@ if (isset($_POST['registerSubmit'])) {
             $register_message = "Email already registered.";
         } else {
             $stmt->close();
-            // Insert new user
             $stmt = $conn->prepare("INSERT INTO users (username, email, password, gender, age) VALUES (?, ?, ?, ?, ?)");
             $stmt->bind_param("sssss", $username, $email, $hashed_password, $gender, $age);
             if ($stmt->execute()) {
@@ -52,11 +49,9 @@ if (isset($_POST['registerSubmit'])) {
 }
 
 if (isset($_POST['loginSubmit'])) {
-    // Changed: get username instead of email
     $username = trim($_POST['login_username']);
     $password = $_POST['login_password'];
 
-    // Changed: check username instead of email
     $stmt = $conn->prepare("SELECT id, username, password FROM users WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
@@ -118,7 +113,6 @@ $conn->close();
                 <button id="signupToggle">Sign Up</button>
             </div>
 
-            <!-- Login Form -->
             <form id="loginForm" class="form" method="POST" action="">
                 <h2>Login</h2>
                 <?php if ($login_message): ?>
@@ -142,7 +136,6 @@ $conn->close();
                 <button type="submit" name="loginSubmit">Login</button>
             </form>
 
-            <!-- Signup Form -->
             <form id="signupForm" class="form hidden" method="POST" action="">
                 <h2>Sign Up</h2>
                 <?php if ($register_message): ?>
@@ -175,7 +168,6 @@ $conn->close();
         </div>
     </div>
 
-    <!-- rest of your HTML -->
     <footer class="footer-landing">
         <div class="footer-content">
             <h2>Chrono Sync</h2>
