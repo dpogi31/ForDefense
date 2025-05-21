@@ -1,12 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
   // ======== MODAL HELPERS ========
   function showModal(modal) {
-    modal.style.display = 'flex';
+    if (modal.classList.contains('modal-overlay-contact')) {
+      modal.classList.add('show');
+    } else {
+      modal.style.display = 'flex';
+    }
     document.body.style.overflow = 'hidden';
   }
 
   function hideModal(modal) {
-    modal.style.display = 'none';
+    if (modal.classList.contains('modal-overlay-contact')) {
+      modal.classList.remove('show');
+    } else {
+      modal.style.display = 'none';
+    }
     document.body.style.overflow = '';
   }
 
@@ -18,10 +26,61 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ======== AUTH MODAL ========
+  // ======== MODAL SETUP FUNCTION ========
+  function setupModal(triggerId, modalId, closeId, formId, successMessage) {
+    const trigger = document.getElementById(triggerId);
+    const modal = document.getElementById(modalId);
+    const close = document.getElementById(closeId);
+    const form = document.getElementById(formId);
+
+    if (trigger && modal && close) {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        showModal(modal);
+      });
+
+      close.addEventListener('click', () => hideModal(modal));
+      closeOnOutsideClick(modal);
+    }
+
+    if (form && successMessage) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert(successMessage);
+        hideModal(modal);
+        form.reset();
+      });
+    }
+  }
+
+  // ======== SUPPORT MODAL ========
+  setupModal('supportBtn', 'supportModal', 'closeSupportModal', 'supportForm', "Thank you for reaching out to support. We'll get back to you soon!");
+
+  // ======== CONTACT MODAL ========
+  setupModal('contactBtn', 'contactModal', 'closeContactModal', 'contactForm', "Thank you for reaching out. We'll get back to you soon!");
+
+  // ======== LEARN MORE MODAL ========
+  setupModal('learnMoreBtn', 'learnMoreModal', 'closeModal');
+
+  // ======== LOGOUT MODAL ========
+  const logoutBtn = document.getElementById('logoutBtn');
+  const logoutModal = document.getElementById('logoutModal');
+  const cancelLogoutBtn = document.getElementById('cancelLogout');
+
+  if (logoutBtn && logoutModal && cancelLogoutBtn) {
+    logoutBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showModal(logoutModal);
+    });
+
+    cancelLogoutBtn.addEventListener('click', () => hideModal(logoutModal));
+    closeOnOutsideClick(logoutModal);
+  }
+
+  // ======== AUTH MODAL (Login/Signup Toggle) ========
   const authModal = document.getElementById('authModal');
   const openAuthBtn = document.getElementById('loginBtn');
-  const closeAuthBtn = document.querySelector('.close-btn');
+  const closeAuthBtn = authModal ? authModal.querySelector('.close-btn') : null;
   const loginForm = document.getElementById('loginForm');
   const signupForm = document.getElementById('signupForm');
   const loginToggle = document.getElementById('loginToggle');
@@ -37,9 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (closeAuthBtn && authModal) {
     closeAuthBtn.addEventListener('click', () => hideModal(authModal));
+    closeOnOutsideClick(authModal);
   }
-
-  if (authModal) closeOnOutsideClick(authModal);
 
   if (loginToggle && signupToggle && loginForm && signupForm) {
     loginToggle.addEventListener('click', () => {
@@ -68,8 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         body: formData,
       })
-        .then((response) => response.json())
-        .then((data) => {
+        .then(response => response.json())
+        .then(data => {
           if (data.success) {
             window.location.href = 'CSHomePage.php';
           } else {
@@ -87,92 +145,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchButton = document.querySelector('.search-container button');
 
   function searchProducts() {
+    if (!searchInput) return;
     const query = searchInput.value.toLowerCase();
     const products = document.querySelectorAll('.product-card');
 
-    products.forEach((card) => {
-      const title = card.querySelector('h2').textContent.toLowerCase();
+    products.forEach(card => {
+      const title = card.querySelector('h2')?.textContent.toLowerCase() || '';
       card.classList.toggle('hidden', !title.includes(query));
     });
   }
 
   if (searchInput) searchInput.addEventListener('input', searchProducts);
   if (searchButton) searchButton.addEventListener('click', searchProducts);
-
-  // ======== LEARN MORE MODAL ========
-  const learnMoreBtn = document.getElementById('learnMoreBtn');
-  const learnMoreModal = document.getElementById('learnMoreModal');
-  const closeLearnMoreBtn = document.getElementById('closeModal');
-
-  if (learnMoreBtn && learnMoreModal && closeLearnMoreBtn) {
-    learnMoreBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      showModal(learnMoreModal);
-    });
-
-    closeLearnMoreBtn.addEventListener('click', () => hideModal(learnMoreModal));
-    closeOnOutsideClick(learnMoreModal);
-  }
-
-  // ======== LOGOUT MODAL ========
-  const logoutBtn = document.getElementById('logoutBtn');
-  const logoutModal = document.getElementById('logoutModal');
-  const cancelLogoutBtn = document.getElementById('cancelLogout');
-
-  if (logoutBtn && logoutModal && cancelLogoutBtn) {
-    logoutBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      showModal(logoutModal);
-    });
-
-    cancelLogoutBtn.addEventListener('click', () => hideModal(logoutModal));
-
-    closeOnOutsideClick(logoutModal);
-  }
-
-  // ======== CONTACT MODAL ========
-  const contactBtn = document.getElementById('contactBtn');
-  const contactModal = document.getElementById('contactModal');
-  const closeContactModal = document.getElementById('closeContactModal');
-  const contactForm = document.getElementById('contactForm');
-
-  if (contactBtn && contactModal && closeContactModal && contactForm) {
-    contactBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      showModal(contactModal);
-    });
-
-    closeContactModal.addEventListener('click', () => hideModal(contactModal));
-    closeOnOutsideClick(contactModal);
-
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert("Thank you for reaching out. We'll get back to you soon!");
-      hideModal(contactModal);
-      contactForm.reset();
-    });
-  }
-
-  // ======== SUPPORT MODAL ========
-  const supportBtn = document.getElementById('supportBtn');
-  const supportModal = document.getElementById('supportModal');
-  const closeSupportBtn = document.getElementById('closeSupportModal');
-  const supportForm = document.getElementById('supportForm');
-
-  if (supportBtn && supportModal && closeSupportBtn && supportForm) {
-    supportBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      showModal(supportModal);
-    });
-
-    closeSupportBtn.addEventListener('click', () => hideModal(supportModal));
-    closeOnOutsideClick(supportModal);
-
-    supportForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert("Thank you for contacting support. We'll respond shortly.");
-      hideModal(supportModal);
-      supportForm.reset();
-    });
-  }
 });
