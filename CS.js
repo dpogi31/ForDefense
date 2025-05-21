@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Handle login form submit with fetch API
   if (loginForm && loginErrorDiv) {
     loginForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -69,17 +68,17 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         body: formData,
       })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          window.location.href = 'CSHomePage.php';
-        } else {
-          loginErrorDiv.textContent = data.message || 'Login failed.';
-        }
-      })
-      .catch(() => {
-        loginErrorDiv.textContent = 'Error connecting to server.';
-      });
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            window.location.href = 'CSHomePage.php';
+          } else {
+            loginErrorDiv.textContent = data.message || 'Login failed.';
+          }
+        })
+        .catch(() => {
+          loginErrorDiv.textContent = 'Error connecting to server.';
+        });
     });
   }
 
@@ -91,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const query = searchInput.value.toLowerCase();
     const products = document.querySelectorAll('.product-card');
 
-    products.forEach(card => {
+    products.forEach((card) => {
       const title = card.querySelector('h2').textContent.toLowerCase();
       card.classList.toggle('hidden', !title.includes(query));
     });
@@ -116,34 +115,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ======== LOGOUT MODAL ========
-  document.addEventListener('DOMContentLoaded', () => {
   const logoutBtn = document.getElementById('logoutBtn');
   const logoutModal = document.getElementById('logoutModal');
   const cancelLogoutBtn = document.getElementById('cancelLogout');
 
-  // Show modal on logout button click
-  logoutBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    logoutModal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-  });
+  if (logoutBtn && logoutModal && cancelLogoutBtn) {
+    logoutBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showModal(logoutModal);
+    });
 
-  // Hide modal on cancel
-  cancelLogoutBtn.addEventListener('click', () => {
-    logoutModal.style.display = 'none';
-    document.body.style.overflow = '';
-  });
+    cancelLogoutBtn.addEventListener('click', () => hideModal(logoutModal));
 
-  // Optional: Close modal when clicking outside the box
-  window.addEventListener('click', (e) => {
-    if (e.target === logoutModal) {
-      logoutModal.style.display = 'none';
-      document.body.style.overflow = '';
-    }
-  });
-});
-
-
+    closeOnOutsideClick(logoutModal);
+  }
 
   // ======== CONTACT MODAL ========
   const contactBtn = document.getElementById('contactBtn');
@@ -165,6 +150,29 @@ document.addEventListener('DOMContentLoaded', () => {
       alert("Thank you for reaching out. We'll get back to you soon!");
       hideModal(contactModal);
       contactForm.reset();
+    });
+  }
+
+  // ======== SUPPORT MODAL ========
+  const supportBtn = document.getElementById('supportBtn');
+  const supportModal = document.getElementById('supportModal');
+  const closeSupportBtn = document.getElementById('closeSupportModal');
+  const supportForm = document.getElementById('supportForm');
+
+  if (supportBtn && supportModal && closeSupportBtn && supportForm) {
+    supportBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showModal(supportModal);
+    });
+
+    closeSupportBtn.addEventListener('click', () => hideModal(supportModal));
+    closeOnOutsideClick(supportModal);
+
+    supportForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert("Thank you for contacting support. We'll respond shortly.");
+      hideModal(supportModal);
+      supportForm.reset();
     });
   }
 });
