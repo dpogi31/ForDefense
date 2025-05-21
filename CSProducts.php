@@ -191,6 +191,7 @@
                 <input type="email" placeholder="Your Email" required />
                 <textarea placeholder="How can we help you?" required></textarea>
                 <button type="submit" class="modal-btn-support confirm">Send</button>
+                <p>© 2025 ChronoSync. All rights reserved.</p>
             </form>
         </div>
     </div>
@@ -206,6 +207,7 @@
                 <input type="email" placeholder="Your Email" required />
                 <textarea placeholder="Your Message" required></textarea>
                 <button type="submit" class="modal-btn-contact">Send Message</button>
+                <p>© 2025 ChronoSync. All rights reserved.</p>
             </form>
         </div>
     </div>
