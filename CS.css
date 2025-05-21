@@ -52,17 +52,13 @@ body {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.55);
-  /* Dark overlay */
   z-index: 1;
-  /* Keeps the overlay behind the content */
 }
 
-/* Ensure text is above the overlay */
 .landing-container>* {
   z-index: 2;
   position: relative;
   color: white;
-  /* White color for better contrast */
 }
 
 .landing-page h1,
@@ -103,7 +99,6 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* Modal Styles */
 .modal {
   display: none;
   position: fixed;
@@ -253,12 +248,10 @@ body {
   background-color: rgb(52, 146, 253);
 }
 
-/* Loading Spinner */
 .loading-spinner {
   margin-top: 20px;
   border: 4px solid rgba(255, 255, 255, 0.3);
   border-top: 4px solid #f0b028;
-  /* Change color as needed */
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -322,11 +315,9 @@ body {
   width: 90%;
   max-width: 400px;
   margin: 0 auto;
-  /* This centers the element */
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
-  /* Optional: aligns inline elements like text/radio buttons */
 }
 
 select.Age {
@@ -340,9 +331,7 @@ select.Age {
   background-color: #fff;
   transition: border-color 0.3s, box-shadow 0.3s;
   margin: 0 auto;
-  /* Doesn't do much alone without block context */
   display: block;
-  /* Ensures margin auto centers it */
   box-sizing: border-box;
   margin-top: 1rem;
   cursor: pointer;
@@ -454,8 +443,6 @@ select.Age:focus {
 }
 
 @media screen and (min-width: 480px) {
-
-  /* Edit this first */
   .landing-container {
     padding: 5rem 2rem;
     border-radius: 2.3rem;
@@ -502,7 +489,6 @@ select.Age:focus {
     font-family: 'Roboto';
   }
 
-  /* to be edit Form height */
   #loginForm {
     display: column;
     flex-direction: column;
@@ -519,7 +505,6 @@ select.Age:focus {
     animation: fadeSlideDown 0.8s ease-out forwards;
   }
 
-  /* to be edit Gender fonts */
   .gender-options {
     display: flex;
     justify-content: center;
@@ -541,40 +526,32 @@ select.Age:focus {
     background: rgba(255, 255, 255, 0.2);
   }
 
-  /* to be edit Age */
   .Age option {
     font-family: 'Roboto';
   }
 
   .modal-content {
     width: 90%;
-    /* Increase width to fit smaller screens */
     margin: 15% auto;
-    /* Adjust margin to center the modal */
     padding: 20px;
-    /* Reduce padding for smaller screens */
   }
 
   .modal-content h2 {
     font-size: 1.8rem;
-    /* Make heading smaller */
   }
 
   .brand {
     font-size: 2.5rem;
-    /* Adjust brand font size */
   }
 
   .modal-content p {
     font-size: 0.9rem;
-    /* Slightly smaller font for mobile */
   }
 
   .close-btn {
     top: 10px;
     right: 10px;
     font-size: 20px;
-    /* Smaller close button */
   }
 
   .form-container {
@@ -586,7 +563,6 @@ select.Age:focus {
     text-align: center;
   }
 
-  /* to be edit options(font size) */
   select.Age option {
     font-size: .90rem;
   }
@@ -614,7 +590,6 @@ select.Age:focus {
     outline: none;
   }
 
-  /* edit font size */
   .form button {
     padding: 0.6rem;
     border: none;
@@ -636,7 +611,6 @@ select.Age:focus {
   }
 
 
-  /* Edit font size */
   #loginForm h2 {
     font-size: 15px;
   }
@@ -649,7 +623,6 @@ select.Age:focus {
     font-size: .90rem;
   }
 
-  /* edit inputs */
   #loginForm input {
     width: 100%;
     max-width: 150px;
@@ -669,7 +642,6 @@ select.Age:focus {
     font-size: .90rem;
   }
 
-  /* edit toggle buttons login and sign up(font-size) */
   .form-toggle button {
     background: none;
     border: none;
@@ -691,7 +663,6 @@ select.Age:focus {
     font-size: .70rem;
   }
 
-  /* edit google buttons fonts */
   .google-btn {
     display: inline-flex;
     align-items: center;
@@ -718,8 +689,6 @@ select.Age:focus {
   .google-btn:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
   }
-
-  /* edit footer */
   .footer-landing h2 {
     font-size: 1.40rem;
   }
@@ -739,7 +708,6 @@ select.Age:focus {
 
 @media screen and (min-width: 768px) {
 
-  /* Edit this first */
   .landing-container {
     padding: 6rem 3rem;
     border-radius: 2.3rem;
@@ -752,33 +720,26 @@ select.Age:focus {
 
   .modal-content {
     width: 85%;
-    /* Slightly larger width for tablet screens */
     margin: 12% auto;
-    /* Adjust margin to center */
     padding: 25px;
-    /* Adjust padding */
   }
 
   .modal-content h2 {
     font-size: 2rem;
-    /* Slightly smaller heading for tablets */
   }
 
   .brand {
     font-size: 2.8rem;
-    /* Adjust brand font size */
   }
 
   .modal-content p {
     font-size: 1rem;
-    /* Keep font size consistent */
   }
 
   .close-btn {
     top: 15px;
     right: 15px;
     font-size: 22px;
-    /* Adjust close button size */
   }
 
   .landing-logo {
@@ -821,7 +782,6 @@ select.Age:focus {
     font-family: 'Roboto';
   }
 
-  /* to be edit Form height */
   #loginForm {
     display: column;
     flex-direction: column;
@@ -838,7 +798,6 @@ select.Age:focus {
     animation: fadeSlideDown 0.8s ease-out forwards;
   }
 
-  /* to be edit Gender fonts */
   .gender-options {
     display: flex;
     justify-content: center;
@@ -860,7 +819,6 @@ select.Age:focus {
     background: rgba(255, 255, 255, 0.2);
   }
 
-  /* to be edit Age */
   .Age option {
     font-family: 'Roboto';
   }
@@ -874,7 +832,6 @@ select.Age:focus {
     text-align: center;
   }
 
-  /* to be edit options(font size) */
   select.Age option {
     font-size: 1.1rem;
   }
@@ -902,7 +859,6 @@ select.Age:focus {
     outline: none;
   }
 
-  /* edit font size */
   .form button {
     padding: 0.7rem;
     border: none;
@@ -923,8 +879,6 @@ select.Age:focus {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   }
 
-
-  /* Edit font size */
   #loginForm h2 {
     font-size: 20px;
   }
@@ -937,7 +891,6 @@ select.Age:focus {
     font-size: 1.1rem;
   }
 
-  /* edit inputs */
   #loginForm input {
     width: 100%;
     max-width: 200px;
@@ -957,7 +910,6 @@ select.Age:focus {
     font-size: 1.1rem;
   }
 
-  /* edit toggle buttons login and sign up(font-size) */
   .form-toggle button {
     background: none;
     border: none;
@@ -979,7 +931,6 @@ select.Age:focus {
     font-size: .80rem;
   }
 
-  /* edit google buttons fonts */
   .google-btn {
     display: inline-flex;
     align-items: center;
@@ -1007,7 +958,6 @@ select.Age:focus {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
   }
 
-  /* edit footer */
   .footer-landing h2 {
     font-size: 1.60rem;
   }
@@ -1027,7 +977,6 @@ select.Age:focus {
 
 @media (min-width: 1024px) {
 
-  /* Edit this first */
   .landing-container {
     padding: 7rem 4rem;
     border-radius: 2.3rem;
@@ -1082,7 +1031,6 @@ select.Age:focus {
     font-family: 'Roboto';
   }
 
-  /* to be edit Form height */
   #loginForm {
     display: column;
     flex-direction: column;
@@ -1099,7 +1047,6 @@ select.Age:focus {
     animation: fadeSlideDown 0.8s ease-out forwards;
   }
 
-  /* to be edit Gender fonts */
   .gender-options {
     display: flex;
     justify-content: center;
@@ -1121,7 +1068,6 @@ select.Age:focus {
     background: rgba(255, 255, 255, 0.2);
   }
 
-  /* to be edit Age */
   .Age option {
     font-family: 'Roboto';
   }
@@ -1135,7 +1081,6 @@ select.Age:focus {
     text-align: center;
   }
 
-  /* to be edit options(font size) */
   select.Age option {
     font-size: 1.3rem;
   }
@@ -1163,7 +1108,6 @@ select.Age:focus {
     outline: none;
   }
 
-  /* edit font size */
   .form button {
     padding: 0.7rem;
     border: none;
@@ -1184,8 +1128,6 @@ select.Age:focus {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   }
 
-
-  /* Edit font size */
   #loginForm h2 {
     font-size: 30px;
   }
@@ -1198,7 +1140,6 @@ select.Age:focus {
     font-size: 1.3rem;
   }
 
-  /* edit inputs */
   #loginForm input {
     width: 100%;
     max-width: 250px;
@@ -1218,7 +1159,6 @@ select.Age:focus {
     font-size: 1.3rem;
   }
 
-  /* edit toggle buttons login and sign up(font-size) */
   .form-toggle button {
     background: none;
     border: none;
@@ -1240,7 +1180,6 @@ select.Age:focus {
     font-size: .90rem;
   }
 
-  /* edit google buttons */
   .google-btn {
     display: inline-flex;
     align-items: center;
@@ -1268,7 +1207,6 @@ select.Age:focus {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
   }
 
-  /* edit footer */
   .footer-landing h2 {
     font-size: 1.80rem;
   }
@@ -1288,7 +1226,6 @@ select.Age:focus {
 
 @media (min-width: 1200px) {
 
-  /* Edit this first */
   .landing-container {
     padding: 8rem 5rem;
     border-radius: 2.5rem;
@@ -1344,7 +1281,6 @@ select.Age:focus {
     font-family: 'Roboto';
   }
 
-  /* to be edit Form height */
   #loginForm {
     display: column;
     flex-direction: column;
@@ -1361,7 +1297,6 @@ select.Age:focus {
     animation: fadeSlideDown 0.8s ease-out forwards;
   }
 
-  /* to be edit Gender */
   .gender-options {
     display: flex;
     justify-content: center;
@@ -1383,7 +1318,6 @@ select.Age:focus {
     background: rgba(255, 255, 255, 0.2);
   }
 
-  /* to be edit Age */
   .Age option {
     font-family: 'Roboto';
   }
@@ -1397,7 +1331,6 @@ select.Age:focus {
     text-align: center;
   }
 
-  /* to be edit options(font size) */
   select.Age option {
     font-size: 1.5rem;
   }
@@ -1425,7 +1358,6 @@ select.Age:focus {
     outline: none;
   }
 
-  /* edit font size */
   .form button {
     padding: 0.7rem;
     border: none;
@@ -1450,7 +1382,6 @@ select.Age:focus {
     background-color: rgb(52, 146, 253);
   }
 
-  /* Edit font size */
   #loginForm h2 {
     font-size: 40px;
   }
@@ -1463,7 +1394,6 @@ select.Age:focus {
     font-size: 1.5rem;
   }
 
-  /* edit inputs */
   #loginForm input {
     width: 100%;
     max-width: 300px;
@@ -1483,7 +1413,6 @@ select.Age:focus {
     font-size: 1.5rem;
   }
 
-  /* edit toggle buttons login and sign up(font-size) */
   .form-toggle button {
     background: none;
     border: none;
@@ -1505,7 +1434,6 @@ select.Age:focus {
     font-size: 1rem;
   }
 
-  /* edit google buttons */
   .google-btn {
     display: inline-flex;
     align-items: center;
@@ -1533,7 +1461,6 @@ select.Age:focus {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
   }
 
-  /* edit footer */
   .footer-landing h2 {
     font-size: 2rem;
   }
@@ -1579,13 +1506,12 @@ select.Age:focus {
   background-repeat: no-repeat;
   position: relative;
   z-index: 10;
-  gap: 1rem; /* add spacing between flex items */
+  gap: 1rem; 
 }
 
 
 .navcontainer {
   flex: 1;
-  /* Take remaining space */
 }
 
 .navlinks {
@@ -1791,10 +1717,8 @@ p {
   color: #111;
 }
 
-/* Modal Styles */
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
   z-index: 999;
   left: 0;
@@ -1933,7 +1857,6 @@ p {
   font-family: sans-serif;
 }
 
-/* Desktop Large Screens - 1200px and up */
 @media (min-width: 1200px) {
   .hero-text h1 {
     font-size: 3.5rem;
@@ -1948,7 +1871,6 @@ p {
   }
 }
 
-/* Laptops & Desktops - 1024px and up */
 @media (min-width: 1024px) and (max-width: 1199px) {
   .hero-text h1 {
     font-size: 3rem;
@@ -1976,7 +1898,6 @@ p {
 }
 
 
-/* Tablets - 768px and up */
 @media (min-width: 768px) and (max-width: 1023px) {
   .navbar {
     flex-direction: row;
@@ -2037,7 +1958,6 @@ p {
   }
 }
 
-/* Mobile - 480px and up */
 @media (min-width: 480px) and (max-width: 767px) {
   .navbar {
     flex-direction: row;
