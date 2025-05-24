@@ -1592,59 +1592,6 @@ select.Age:focus {
 .logout-btn:hover {
   background-color: #575757;
 }
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-toggle {
-  background-color: #028cdb;
-  color: white;
-  font-size: 1.2rem;
-  padding: 0.7rem 1.2rem;
-  border: none;
-  border-radius: 5px;
-  font-family: 'Raleway', sans-serif;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-toggle:hover {
-  background-color: #575757;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* Optional: make logout button fit the dropdown style */
-.logout-btn {
-  background-color: transparent;
-  color: #333;
-  font-size: 1rem;
-  padding: 10px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  font-family: 'Raleway', sans-serif;
-  cursor: pointer;
-}
-
-.logout-btn:hover {
-  background-color: #f0f0f0;
-}
 
 .modal-overlay {
   position: fixed;

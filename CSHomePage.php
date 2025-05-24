@@ -34,28 +34,20 @@ $userEmail = $_SESSION['user_email'] ?? 'User';
         <li><a href="#" id="contactBtn">Contact</a></li>
       </ul>
 
-      <!-- DROPDOWN WRAPPER -->
-      <div class="dropdown">
-        <button class="dropdown-toggle">Account ▾</button>
-        <div class="dropdown-menu">
-          <form id="logoutForm" method="POST" action="logout.php">
-            <button type="button" class="logout-btn" id="logoutBtn">Logout</button>
+      <form id="logoutForm" method="POST" action="logout.php" style="display:inline;">
+        <button type="button" class="logout-btn" id="logoutBtn">Logout</button>
 
-            <div id="logoutModal" class="modal-overlay" style="display:none;">
-              <div class="modal-box">
-                <h2>Confirm Logout</h2>
-                <p>Are you sure you want to log out?</p>
-                <div class="modal-actions">
-                  <button type="submit" id="confirmLogout" class="modal-btn confirm">Yes</button>
-                  <button type="button" id="cancelLogout" class="modal-btn cancel">No</button>
-                </div>
-              </div>
+        <div id="logoutModal" class="modal-overlay" style="display:none;">
+          <div class="modal-box">
+            <h2>Confirm Logout</h2>
+            <p>Are you sure you want to log out?</p>
+            <div class="modal-actions">
+              <button type="submit" id="confirmLogout" class="modal-btn confirm">Yes</button>
+              <button type="button" id="cancelLogout" class="modal-btn cancel">No</button>
             </div>
-          </form>
+          </div>
         </div>
-      </div>
-
-
+      </form>
 
     </nav>
 
