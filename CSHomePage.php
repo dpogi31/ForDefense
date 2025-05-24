@@ -34,20 +34,18 @@ $userEmail = $_SESSION['user_email'] ?? 'User';
         <li><a href="#" id="contactBtn">Contact</a></li>
       </ul>
 
-      <form id="logoutForm" method="POST" action="logout.php" style="display:inline;">
-        <button type="button" class="logout-btn" id="logoutBtn">Logout</button>
-
-        <div id="logoutModal" class="modal-overlay" style="display:none;">
-          <div class="modal-box">
-            <h2>Confirm Logout</h2>
-            <p>Are you sure you want to log out?</p>
-            <div class="modal-actions">
-              <button type="submit" id="confirmLogout" class="modal-btn confirm">Yes</button>
-              <button type="button" id="cancelLogout" class="modal-btn cancel">No</button>
-            </div>
-          </div>
+      <div class="user-dropdown">
+        <button class="user-icon" id="userDropdownBtn">
+          <i class="fas fa-user-circle"></i> <?php echo htmlspecialchars($userEmail); ?>
+          <i class="fas fa-caret-down"></i>
+        </button>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <form id="logoutForm" method="POST" action="logout.php">
+            <button type="button" class="logout-btn" id="logoutBtn">Logout</button>
+          </form>
         </div>
-      </form>
+      </div>
+
 
 
     </nav>
@@ -92,35 +90,35 @@ $userEmail = $_SESSION['user_email'] ?? 'User';
     </section>
   </main>
   <div id="supportModal" class="modal-overlay-support">
-        <div class="modal-box-support">
-            <span class="close-btn-support" id="closeSupportModal">&times;</span>
-            <h2>Need Help?</h2>
-            <p>If you have any questions or issues, feel free to reach out to our support team!</p>
-            <form id="supportForm">
-                <input type="text" placeholder="Your Name" required />
-                <input type="email" placeholder="Your Email" required />
-                <textarea placeholder="How can we help you?" required></textarea>
-                <button type="submit" class="modal-btn-support confirm">Send</button>
-                <p>© 2025 ChronoSync. All rights reserved.</p>
-            </form>
-        </div>
+    <div class="modal-box-support">
+      <span class="close-btn-support" id="closeSupportModal">&times;</span>
+      <h2>Need Help?</h2>
+      <p>If you have any questions or issues, feel free to reach out to our support team!</p>
+      <form id="supportForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="How can we help you?" required></textarea>
+        <button type="submit" class="modal-btn-support confirm">Send</button>
+        <p>© 2025 ChronoSync. All rights reserved.</p>
+      </form>
     </div>
+  </div>
 
-    <!-- Contact Modal -->
-    <div class="modal-overlay-contact" id="contactModal">
-        <div class="modal-box-contact">
-            <button id="closeContactModal">&times;</button>
-            <h2>Contact Us</h2>
-            <p>Have questions or feedback? We'd love to hear from you.</p>
-            <form id="contactForm">
-                <input type="text" placeholder="Your Name" required />
-                <input type="email" placeholder="Your Email" required />
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="modal-btn-contact">Send Message</button>
-                <p>© 2025 ChronoSync. All rights reserved.</p>
-            </form>
-        </div>
+  <!-- Contact Modal -->
+  <div class="modal-overlay-contact" id="contactModal">
+    <div class="modal-box-contact">
+      <button id="closeContactModal">&times;</button>
+      <h2>Contact Us</h2>
+      <p>Have questions or feedback? We'd love to hear from you.</p>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="modal-btn-contact">Send Message</button>
+        <p>© 2025 ChronoSync. All rights reserved.</p>
+      </form>
     </div>
+  </div>
 
 </body>
 

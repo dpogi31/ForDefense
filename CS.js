@@ -63,19 +63,39 @@ document.addEventListener('DOMContentLoaded', () => {
   setupModal('learnMoreBtn', 'learnMoreModal', 'closeModal');
 
   // ======== LOGOUT MODAL ========
-  const logoutBtn = document.getElementById('logoutBtn');
-  const logoutModal = document.getElementById('logoutModal');
-  const cancelLogoutBtn = document.getElementById('cancelLogout');
+const logoutBtn = document.getElementById('logoutBtn');
+const logoutModal = document.getElementById('logoutModal');
+const cancelLogoutBtn = document.getElementById('cancelLogout');
 
-  if (logoutBtn && logoutModal && cancelLogoutBtn) {
-    logoutBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      showModal(logoutModal);
-    });
+if (logoutBtn && logoutModal && cancelLogoutBtn) {
+  logoutBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    showModal(logoutModal);
+  });
 
-    cancelLogoutBtn.addEventListener('click', () => hideModal(logoutModal));
-    closeOnOutsideClick(logoutModal);
-  }
+  cancelLogoutBtn.addEventListener('click', () => hideModal(logoutModal));
+  closeOnOutsideClick(logoutModal);
+}
+
+// ======== USER DROPDOWN MENU ========
+const userDropdownBtn = document.getElementById("userDropdownBtn");
+const dropdownMenu = document.getElementById("dropdownMenu");
+
+if (userDropdownBtn && dropdownMenu) {
+  userDropdownBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+  });
+
+  dropdownMenu.addEventListener("click", function (e) {
+    e.stopPropagation(); // Prevent closing when clicking inside dropdown
+  });
+
+  document.addEventListener("click", function () {
+    dropdownMenu.style.display = "none";
+  });
+}
+
 
   // ======== AUTH MODAL (Login/Signup Toggle) ========
   const authModal = document.getElementById('authModal');
