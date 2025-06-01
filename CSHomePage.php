@@ -105,7 +105,6 @@ $userEmail = $_SESSION['user_email'] ?? 'User';
     </div>
   </div>
 
-  <!-- Contact Modal -->
   <div class="modal-overlay-contact" id="contactModal">
     <div class="modal-box-contact">
       <button id="closeContactModal">&times;</button>
@@ -122,6 +121,23 @@ $userEmail = $_SESSION['user_email'] ?? 'User';
   </div>
 
 </body>
+
+<div class="modal" id="learnMoreModal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <h2>About <span class="brand1">Chrono Sync</span></h2>
+    <p>
+      Chrono Sync is a fusion of precision and style, delivering smart timepieces crafted for the future.
+      Our mission is to blend classic aesthetics with modern technology, creating watches that do more than just tell
+      time.
+    </p>
+    <p>
+      Whether you're an urban explorer, a tech enthusiast, or a minimalist trendsetter, Chrono Sync offers collections
+      that match your lifestyle.
+    </p><br>
+    <p>© 2025 ChronoSync. All rights reserved.</p>
+  </div>
+</div>
 
 <footer class="footer-landing">
   <div class="footer-content">
@@ -140,23 +156,9 @@ $userEmail = $_SESSION['user_email'] ?? 'User';
     <p>© 2025 ChronoSync. All rights reserved.</p>
   </div>
 </footer>
-<!-- Modal -->
-<div class="modal" id="learnMoreModal">
-  <div class="modal-content">
-    <span class="close-btn" id="closeModal">&times;</span>
-    <h2>About <span class="brand1">Chrono Sync</span></h2>
-    <p>
-      Chrono Sync is a fusion of precision and style, delivering smart timepieces crafted for the future.
-      Our mission is to blend classic aesthetics with modern technology, creating watches that do more than just tell
-      time.
-    </p>
-    <p>
-      Whether you're an urban explorer, a tech enthusiast, or a minimalist trendsetter, Chrono Sync offers collections
-      that match your lifestyle.
-    </p><br>
-    <p>© 2025 ChronoSync. All rights reserved.</p>
-  </div>
-</div>
+
+
+
 <script src="CS.js"></script>
 
 </html>

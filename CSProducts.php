@@ -77,7 +77,6 @@
         </div>
     </div>
 
-    <!-- Contact Modal -->
     <div class="modal-overlay-contact" id="contactModal">
         <div class="modal-box-contact">
             <button id="closeContactModal">&times;</button>
