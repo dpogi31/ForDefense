@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // ======== MODAL HELPERS ========
+  //  MODAL HELPERS 
   function showModal(modal) {
     if (modal.classList.contains('modal-overlay-contact')) {
       modal.classList.add('show');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ======== MODAL SETUP FUNCTION ========
+  //  MODAL SETUP FUNCTION 
   function setupModal(triggerId, modalId, closeId, formId, successMessage) {
     const trigger = document.getElementById(triggerId);
     const modal = document.getElementById(modalId);
@@ -53,16 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ======== SUPPORT MODAL ========
+  //  SUPPORT MODAL 
   setupModal('supportBtn', 'supportModal', 'closeSupportModal', 'supportForm', "Thank you for reaching out to support. We'll get back to you soon!");
 
-  // ======== CONTACT MODAL ========
+  //  CONTACT MODAL 
   setupModal('contactBtn', 'contactModal', 'closeContactModal', 'contactForm', "Thank you for reaching out. We'll get back to you soon!");
 
-  // ======== LEARN MORE MODAL ========
+  //  LEARN MORE MODAL 
   setupModal('learnMoreBtn', 'learnMoreModal', 'closeModal');
 
-  // ======== LOGOUT MODAL ========
+  //  LOGOUT MODAL 
   const logoutBtn = document.getElementById('logoutBtn');
   const logoutModal = document.getElementById('logoutModal');
   const cancelLogoutBtn = document.getElementById('cancelLogout');
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeOnOutsideClick(logoutModal);
   }
 
-  // ======== AUTH MODAL (Login/Signup Toggle) ========
+  //  AUTH MODAL (Login/Signup Toggle) 
   const authModal = document.getElementById('authModal');
   const openAuthBtn = document.getElementById('loginBtn');
   const closeAuthBtn = authModal ? authModal.querySelector('.close-btn') : null;
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ======== SEARCH FUNCTION ========
+  //  SEARCH FUNCTION 
   const searchInput = document.getElementById('productSearch');
   const searchButton = document.querySelector('.search-container button');
 
