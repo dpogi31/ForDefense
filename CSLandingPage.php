@@ -1,15 +1,6 @@
 <?php
 session_start();
-
-$servername = "localhost";
-$dbusername = "root";
-$dbpassword = "";
-$dbname = "chronosync";
-
-$conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'db_connect.php';
 
 $register_message = '';
 $login_message = '';
@@ -78,6 +69,7 @@ if (isset($_POST['loginSubmit'])) {
 
 $conn->close();
 ?>
+
 
 
 

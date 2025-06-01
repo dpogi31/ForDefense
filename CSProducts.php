@@ -34,153 +34,34 @@
     </header>
 
     <main>
-        <h1>Our Products</h1>
-        <section>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="assets/images/P1.png" alt="product image ">
-                    <h2>Apple Watch Series 10 GPS</h2>
-                    <p>₱16,000</p>
-                    <button>ADD TO CART</button>
-                </div>
+    <h1>Our Products</h1>
+    <section>
+        <div class="product-grid">
+            <?php
+            include 'db_connect.php';
 
-                <div class="product-card">
-                    <img src="assets/images/P2.png" alt="product image ">
-                    <h2>AIYISHI Unisex Stainless Watch</h2>
-                    <p>₱12,999</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P3.png" alt="product image ">
-                    <h2>Apple Watch Series 11 GPS + Cellular</h2>
-                    <p>₱42,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P4.png" alt="product image ">
-                    <h2>Black Fashion Quartz Watch</h2>
-                    <p>₱38,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P5.png" alt="product image ">
-                    <h2>Deep Sea Omega Royalty</h2>
-                    <p>₱36,850</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P6.png" alt="product image ">
-                    <h2>Apple Watch Ultra</h2>
-                    <p>₱68,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P7.png" alt="product image ">
-                    <h2>Xiaomi REDMI Watch 5 Active</h2>
-                    <p>₱28,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P8.png" alt="product image ">
-                    <h2>COOBOS Luxury LED Luminous Watch</h2>
-                    <p>₱30,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P9.png" alt="product image ">
-                    <h2>Samsung Galaxy Watch FE</h2>
-                    <p>₱43,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P10.png" alt="product image ">
-                    <h2>SANDA Official 100% Genuine Mens Watch</h2>
-                    <p>₱40,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P11.png" alt="product image ">
-                    <h2>Titan Karishma Quartz Analog Silver Dial</h2>
-                    <p>₱52,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P12.png" alt="product image ">
-                    <h2>Carlington Men Stainless Steel Watch</h2>
-                    <p>₱47,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P13.png" alt="product image ">
-                    <h2>OLEVS Mens Chronograph Watch</h2>
-                    <p>₱45,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P14.png" alt="product image ">
-                    <h2>Fossil Men's Stainless Steel Chronograph Watch</h2>
-                    <p>₱37,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P15.png" alt="product image ">
-                    <h2>Omega Seamaster 75th Anniversary</h2>
-                    <p>₱41,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P16.png" alt="product image ">
-                    <h2>SRPJ45 Seiko Watch</h2>
-                    <p>₱58,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P17.png" alt="product image ">
-                    <h2>Curren 8356 Black Steel Chain Round Dial Men's Wrist Watch</h2>
-                    <p>₱68,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P18.png" alt="product image ">
-                    <h2>HUAWEI WATCH FIT 3 - Smart Watch</h2>
-                    <p>₱39,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P19.png" alt="product image ">
-                    <h2>Timex Expedition North Mechanical Men's Watch</h2>
-                    <p>₱54,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P20.png" alt="product image ">
-                    <h2>MVMT Men Blacktop Analogue Chronograph Watch</h2>
-                    <p>₱56,000</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P21.png" alt="product image ">
-                    <h2>Tom Brady's Exclusive Watch</h2>
-                    <p>$4M</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P22.png" alt="product image ">
-                    <h2>Astos Millionaire's Watch</h2>
-                    <p>$1.5M</p>
-                    <button>ADD TO CART</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/P23.png" alt="product image ">
-                    <h2>Fintime Sapphire and Silver Watch</h2>
-                    <p>$1M</p>
-                    <button>ADD TO CART</button>
-                </div>
+            $sql = "SELECT * FROM products";
+            $result = $conn->query($sql);
 
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="product-card">';
+                    echo '<img src="' . htmlspecialchars($row['image_path']) . '" alt="' . htmlspecialchars($row['name']) . '">';
+                    echo '<h2>' . htmlspecialchars($row['name']) . '</h2>';
+                    echo '<p>₱' . number_format($row['price'], 2) . '</p>';
+                    echo '<button>ADD TO CART</button>';
+                    echo '</div>';
+                }
+            } else {
+                echo '<p>No products found.</p>';
+            }
 
-            </div>
-        </section>
-    </main>
+            $conn->close();
+            ?>
+        </div>
+    </section>
+</main>
+
     <div id="supportModal" class="modal-overlay-support">
         <div class="modal-box-support">
             <span class="close-btn-support" id="closeSupportModal">&times;</span>
